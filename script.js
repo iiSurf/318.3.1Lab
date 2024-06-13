@@ -5,6 +5,13 @@ const PORT = process.env.PORT || 3000;
 const posts = require('./data/posts.js');
 const users = require('./data/users.js');
 
+// app.set('view engine', 'ejs');
+
+// app.get('/', (req,res) => {
+//     console.log('Hey Hi Hello');
+//     res.render("script");
+// })
+
 // Body parser middlware
 // we have access to the parsed data within our routes.
 // The parsed data will be located in "req.body".
