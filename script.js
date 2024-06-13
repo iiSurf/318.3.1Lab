@@ -5,6 +5,13 @@ const PORT = process.env.PORT || 3000;
 const posts = require('./data/posts.js');
 const users = require('./data/users.js');
 
+app.use(express.static('public'));
+
+app.get('/image/profile.jpg', (req, res) => {
+    const imageLocation = '/image/profile.jpg';
+    res.download(imageLocation, 'profile.jpg');
+})
+
 // app.set('view engine', 'ejs');
 
 // app.get('/', (req,res) => {
@@ -198,5 +205,5 @@ app.use((req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log('Server running on port: ' + PORT);
+  console.log('Server running on port: ${PORT}');
 });
